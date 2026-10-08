@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#070a0f">
+    <title>THERM CORE｜散熱監控與風扇控制</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+    <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+    <main class="shell">
+        <header class="topbar">
+            <a class="brand" href="/" aria-label="THERM CORE 首頁">
+                <span class="brand-mark">TC</span>
+                <span><strong>THERM CORE</strong><small>THERMAL CONTROL SYSTEM</small></span>
+            </a>
+            <div class="header-meta">
+                <div class="source-status" id="sourceStatus"><span class="status-dot"></span><span id="sourceLabel">DEMO DATA</span></div>
+                <div class="clock" id="clock">--:--:--</div>
+            </div>
+        </header>
+
+        <section class="hero-grid" aria-label="系統即時資訊">
+            <article class="pue-card panel">
+                <div class="panel-kicker"><span>SYSTEM EFFICIENCY</span><span class="tag tag-green">LOW PUE</span></div>
+                <div class="pue-display">
+                    <div><span class="pue-label">SYSTEM PUE</span><strong id="pueValue">1.08</strong></div>
+                    <div class="gauge" id="pueGauge" aria-label="PUE 1.08"><span>OPTIMAL</span></div>
+                </div>
+                <div class="efficiency-copy"><span class="accent-line"></span><p>即時監控運算設備<br><strong>維持高效散熱</strong></p></div>
+                <div class="feature-badges"><span>NO PUMP</span><span>AIR COOLED</span></div>
+            </article>
+
+            <article class="chart-card panel">
+                <div class="chart-heading">
+                    <div><div class="panel-kicker">THERMAL TELEMETRY</div><h1>溫度變化趨勢</h1></div>
+                    <div class="temperature-now"><span>目前溫度</span><strong><span id="temperatureValue">--.-</span><small>°C</small></strong></div>
+                </div>
+                <div class="chart-stats"><span>最近 60 秒</span><span>MAX <strong id="maxTemp">--.-°</strong></span><span>AVG <strong id="avgTemp">--.-°</strong></span></div>
+                <div class="chart-wrap"><canvas id="temperatureChart" role="img" aria-label="最近 60 秒溫度曲線"></canvas><div class="chart-tooltip" id="chartTooltip" hidden></div></div>
+            </article>
+        </section>
+
+        <section class="fan-control panel" aria-labelledby="fanControlTitle">
+            <div>
+                <span class="eyebrow">WI-FI LAN · L298N PWM CONTROL</span>
+                <h2 id="fanControlTitle">Delta FFB1212SH 大風扇</h2>
+                <p>拖曳滑桿調整轉速；關閉時會保留最後設定，再開啟即恢復該轉速。</p>
+            </div>
+            <div class="slider-control">
+                <div class="fan-control-heading">
+                    <output id="fanSpeedValue" for="fanSpeed">50%</output>
+                    <button class="fan-toggle is-on" id="fanToggle" type="button" role="switch" aria-checked="true" aria-label="大風扇電源">
+                        <span class="fan-toggle-knob" aria-hidden="true"></span><span id="fanToggleLabel">運轉中</span>
+                    </button>
+                </div>
+                <input id="fanSpeed" type="range" min="1" max="100" step="1" value="50" aria-label="大風扇轉速百分比">
+                <div class="slider-scale"><span>1%</span><span>全速</span></div>
+                <div class="fan-control-status is-pending" id="fanControlStatus" role="status">正在區域網路內尋找 ESP32…</div>
+            </div>
+        </section>
+
+        <section class="metrics-section" aria-labelledby="metricsTitle">
+            <div class="section-heading"><div><span class="eyebrow">HARDWARE TELEMETRY</span><h2 id="metricsTitle">硬體即時狀態</h2></div><button class="csv-button" id="downloadCsv" type="button"><span class="download-icon">↓</span>下載 CSV</button></div>
+            <div class="metrics-grid">
+                <article class="metric-card fan-card panel"><div class="metric-icon fan-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="metric-body"><span class="metric-label">內部風扇</span><div class="metric-number"><strong id="internalFan">100</strong><small>%</small></div><div class="progress-track"><span id="internalFanBar" style="width:100%"></span></div><span class="metric-note">PWM DUTY CYCLE</span></div></article>
+                <article class="metric-card fan-card panel"><div class="metric-icon fan-icon fan-icon-alt" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="metric-body"><span class="metric-label">Delta 大風扇</span><div class="metric-number"><strong id="externalFan">50</strong><small>%</small></div><div class="progress-track"><span id="externalFanBar" style="width:50%"></span></div><span class="metric-note">PWM DUTY CYCLE</span></div></article>
+                <article class="metric-card power-card panel"><div class="metric-icon bolt-icon" aria-hidden="true">ϟ</div><div class="metric-body"><span class="metric-label">晶片功耗</span><div class="metric-number"><strong id="chipPower">100.0</strong><small>W</small></div><span class="metric-note">COMPUTE LOAD</span></div><span class="spark spark-one"></span></article>
+                <article class="metric-card power-card panel"><div class="metric-icon bolt-icon bolt-icon-alt" aria-hidden="true">ϟ</div><div class="metric-body"><span class="metric-label">風扇功耗</span><div class="metric-number"><strong id="fanPower">7.9</strong><small>W</small></div><span class="metric-note">COOLING LOAD</span></div><span class="spark spark-two"></span></article>
+            </div>
+        </section>
+        <footer><span>THERM CORE // EDGE COOLING LAB</span><span>溫度・能源效率・散熱控制</span></footer>
+    </main>
+</body>
+</html>
