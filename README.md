@@ -8,7 +8,7 @@
 
 [📄 Full Undergraduate Thesis (PDF)](docs/Undergraduate_Thesis_Immersion_Cooling_Heat_Pipes.pdf)
 
-## Overview
+## Overview 111
 
 This project investigates a **pump-free single-phase immersion cooling** architecture for high-power electronics. A 100 W PTC heater is immersed in dielectric coolant (EC-110). A low-power submerged fan mixes the coolant, while six finned heat pipes carry heat out of the tank to an air-cooled condenser region. The system is evaluated experimentally and using COMSOL Multiphysics.
 
