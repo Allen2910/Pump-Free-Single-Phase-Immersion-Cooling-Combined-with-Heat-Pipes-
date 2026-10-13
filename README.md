@@ -1,6 +1,6 @@
 # Pump-Free Single-Phase Immersion Cooling Combined with Heat Pipes
 
-[Interaction Interface README](README.net.md)
+[Interaction Interface](README.net.md)
 
 **Experimental investigation and COMSOL simulation of a low-energy, pump-free electronic cooling system**
 
