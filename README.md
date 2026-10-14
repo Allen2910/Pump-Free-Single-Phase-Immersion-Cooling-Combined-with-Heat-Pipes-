@@ -8,7 +8,7 @@
 **Researchers:** Rui-Jie Li (李睿捷), Hsu-Hsiang Yu (游許祥)  
 **Advisor:** Prof. Chen-Kun Kuo (郭振坤)
 
-[📄 Full Undergraduate Thesis (PDF)](docs/Undergraduate_Thesis_Immersion_Cooling_Heat_Pipes.pdf)
+[📄 Full Undergraduate Thesis (PDF)](essay.pdf)
 
 ## Overview 
 
@@ -161,7 +161,7 @@ The experimental report describes an ESP32-based temperature monitoring system w
 
 **熱管結合單相浸沒式冷卻之模擬與實作**  
 Authors: 李睿捷、游許祥 · Advisor: 郭振坤博士  
-[Read the full thesis (PDF)](docs/Undergraduate_Thesis_Immersion_Cooling_Heat_Pipes.pdf)
+[Read the full thesis (PDF)](essay.pdf)
 
 The PDF contains literature review, design methods, experimental photographs, result plots, simulation figures, discussion, and references. Values in this README are based on the thesis; where the thesis contains conflicting figures, the detailed results and figure captions are used, and discrepancies are explicitly noted.
 
