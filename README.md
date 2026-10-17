@@ -1,8 +1,11 @@
 # Pump-Free Single-Phase Immersion Cooling Combined with Heat Pipes
 
-[THERM CORE Dashboard & ESP32 Integration Guide](README.net.md) ·
-[Undergraduate thesis](essay.pdf) ·
-[Project video](recording.mp4)
+[THERM CORE Dashboard & ESP32 Integration Guide](README.net.md) 
+[Undergraduate thesis](essay.pdf) 
+
+https://github.com/user-attachments/assets/95db2ce8-414f-4e5a-9532-949ecefda8bf
+
+
 
 **Experimental investigation and COMSOL simulation of a low-energy, pump-free electronic cooling system**
 
