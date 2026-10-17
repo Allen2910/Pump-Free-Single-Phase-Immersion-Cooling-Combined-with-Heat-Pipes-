@@ -1,14 +1,14 @@
 # Pump-Free Single-Phase Immersion Cooling Combined with Heat Pipes
 
-[Interaction Interface](README.net.md)
+[THERM CORE Dashboard & ESP32 Integration Guide](README.net.md) ·
+[Undergraduate thesis](essay.pdf) ·
+[Project video](recording.mp4)
 
 **Experimental investigation and COMSOL simulation of a low-energy, pump-free electronic cooling system**
 
 **National Sun Yat-sen University · Department of Mechanical and Electro-Mechanical Engineering**  
 **Researchers:** Rui-Jie Li (李睿捷), Hsu-Hsiang Yu (游許祥)  
 **Advisor:** Prof. Chen-Kun Kuo (郭振坤)
-
-[📄 Full Undergraduate Thesis (PDF)](essay.pdf)
 
 ## Overview 
 
