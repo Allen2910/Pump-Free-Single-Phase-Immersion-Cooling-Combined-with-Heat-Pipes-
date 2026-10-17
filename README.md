@@ -3,15 +3,16 @@
 [THERM CORE Dashboard & ESP32 Integration Guide](README.net.md) <br>
 [Undergraduate thesis](essay.pdf) 
 
-https://github.com/user-attachments/assets/95db2ce8-414f-4e5a-9532-949ecefda8bf
-
-
 
 **Experimental investigation and COMSOL simulation of a low-energy, pump-free electronic cooling system**
 
 **National Sun Yat-sen University · Department of Mechanical and Electro-Mechanical Engineering**  
 **Researchers:** Rui-Jie Li (李睿捷), Hsu-Hsiang Yu (游許祥)  
 **Advisor:** Prof. Chen-Kun Kuo (郭振坤)
+
+
+https://github.com/user-attachments/assets/95db2ce8-414f-4e5a-9532-949ecefda8bf
+
 
 ## Overview 
 
